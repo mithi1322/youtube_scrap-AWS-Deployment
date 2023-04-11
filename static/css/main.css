@@ -1,3 +1,56 @@
+/* Center the content in the container */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Style the heading */
+  h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Style the form container */
+  .form {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the input fields */
+  input[type="text"] {
+    font-size: 1.5rem;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 1rem;
+    background-color: #F8F8F8;
+  }
+  
+  /* Style the search button */
+  button[type="submit"] {
+    font-size: 1.5rem;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
 body, html {
     margin: 0;
     font-family: sans-serif;
