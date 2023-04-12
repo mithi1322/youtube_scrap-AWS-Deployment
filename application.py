@@ -53,7 +53,7 @@ def index():
                 view=views[i].split('"')[-2]
                 published_times=published_time[i].split('"')[-2]
             
-                mydict = {"Sr.No.":i, "Videos_Url": video_url, "Thumbnails": thumbnail, "Titles": title,"Views": view,"Published_Time":published_times}
+                mydict = {"Sr.No.":i+1, "Videos Url": video_url, "Thumbnails": thumbnail, "Titles": title,"Views": view,"Published_Time":published_times}
                 reviews.append(mydict)
 
             return render_template('results.html', reviews=reviews[0:(len(reviews)-1)])
