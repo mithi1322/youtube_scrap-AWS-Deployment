@@ -45,7 +45,7 @@ def index():
             headers = "Sr.No.,Videoids, Thumbnails, Titles, Views, Published Time \n"
             fw.write(headers)
             reviews = []
-            #report_list =['S No', 'Video url', 'Thumbnails', 'Titles', 'Views', 'Published Time']
+            
             for i in range(6):
                 video_url="https://www.youtube.com/watch?v="+videoids[i].split('"')[-2]
                 thumbnail=thumbnails[i].split('"')[-2]
