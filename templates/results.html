@@ -1,47 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Youtube Scrapping</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-
-      <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-
+	<title>YouTube Channel Scraper Results</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
-
 <body>
-
-  <div class="table-users">
-   <div class="header">Youtube scrap content</div>
-
-   <table cellspacing="0">
-      <tr>
-         <th>Sr.No.</th>
-         <th>Videos Url</th>
-         <th>Thumbnails</th>
-         <th>Titles</th>
-         <th>Views</th>
-         <th>Published Time</th>
-      </tr>
-         {% for review in reviews %}
-      <tr>
-          <td>{{review['Sr.No.']}}</td>
-         <td>{{review['Videos_Url']}}</td>
-         <td>{{review['Thumbnails']}}</td>
-         <td>{{review['Titles']}}</td>
-         <td>{{review['Views']}} </td>
-         <td>{{review['Published_Time']}} </td>
-       {% endfor %}
-   </table>
-</div>
-
-
-
+	<div class="container">
+		<div class="header">
+			<h1>YouTube Channel Scraper Results</h1>
+		</div>
+		<div class="table">
+			<table>
+				<tr>
+					<th>Sr. No.</th>
+					<th>Video URL</th>
+					<th>Thumbnail</th>
+					<th>Title</th>
+					<th>Views</th>
+					<th>Published Time</th>
+				</tr>
+				{% for review in reviews %}
+				<tr>
+					<td>{{ review['Sr.No.'] }}</td>
+					<td><a href="{{ review['Videos_Url'] }}" target="_blank">{{ review['Videos_Url'] }}</a></td>
+					<td><img src="{{ review['Thumbnails'] }}"></td>
+					<td>{{ review['Titles'] }}</td>
+					<td>{{ review['Views'] }}</td>
+					<td>{{ review['Published_Time'] }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
 </body>
-
 </html>
